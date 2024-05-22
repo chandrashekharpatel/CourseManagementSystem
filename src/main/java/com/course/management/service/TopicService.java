@@ -19,7 +19,7 @@ import com.course.management.repository.TopicRepository;
 
 @Service
 public class TopicService {
-	private final String uploadDir = "D:/React-Application/ImageStorage";
+	private final String uploadDir = "D:\\React-Application\\coursemanagemetsystem\\src\\images";
 	@Autowired
 	private TopicRepository topicRepository;
        public void save(Topics topics) {

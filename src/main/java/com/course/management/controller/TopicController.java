@@ -80,17 +80,18 @@ public class TopicController {
     	return topicService.getAllTopics();
     }
 
-//@GetMapping("/topics")
-//public List<Topics> getAllTopics() {
-//    List<Topics> topics = topicService.getAllTopics();
-//    for (Topics topic : topics) {
-//        String imageUrl = topic.getImageUrl();
-//        // Assuming imageUrl contains the relative path to the image file
-//        // Construct the complete image URL using the server URL
-//        topic.setImageUrl("http://localhost:9080/ImageStorage/" + imageUrl);
-//    }
-//    return topics;
-//}
+@GetMapping("/topicss")
+public List<Topics> getAllTopicss() {
+    List<Topics> topics = topicService.getAllTopics();
+    for (Topics topic : topics) {
+        String imageUrl = topic.getImageUrl();
+        System.out.println("Check :: 88 Controller :: "+imageUrl);
+        // Assuming imageUrl contains the relative path to the image file
+        // Construct the complete image URL using the server URL
+        topic.setImageUrl("http://localhost:9080/images/" + imageUrl);
+    }
+    return topics;
+}
     
 //    @GetMapping("/topics")
 //    public List<Topics> getAllTopics() {
