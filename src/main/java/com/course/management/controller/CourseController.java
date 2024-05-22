@@ -25,6 +25,8 @@ public class CourseController {
     	  courseService.save(course);
     	  return course.getId();
       }
+	//
+	//
 	@PutMapping("/updateCourse/{id}")
 	private Course update(@RequestBody Course course) {
 		  courseService.save(course);
